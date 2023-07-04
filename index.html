@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+    <style>
+        /* Estilos para o quadro que ocupa um terço da tela */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        .quadro {
+            width: 33.33vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .letra2{
+            font-size: 35px;
+            color: #700660;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       .letra{
+            font-size: 50px;
+            color: #700660;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+        /* Estilos para o quadrado rosa com letras brancas */
+        .quadrado {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Define a animação pulsar */
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Aplica a animação ao coração */
+        .coracao {
+            animation: pulsar 2s infinite;
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadro">
+        <div class="quadrado">
+            <h1 class="letra"  >Descodificadas</h1>
+            <h2 class="letra2">Eu amo tecnologia</h2>
+            <img src="./coracao.png" alt="" class="coracao">
+        </div>
+    </div>
+</body>
+</html>
